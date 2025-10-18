@@ -4,3 +4,40 @@ img, video{
   max-width: 100%;
   height: auto;
 }
+.landmarks-grid{
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+figure{ margin:0;}
+
+.videoWrapper{
+  position: relative;
+  padding-top: 25px;
+  height: 0;
+  clear: both;
+}
+
+.videoWrapper.ratio-16-9{
+  padding-bottom: 56.25%;
+}
+
+.videoWrapper iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: "Playfair Display"
+}
+
+p {
+  font-family: "Source Sans Pro", serif;
+}
+
+a {
+  font-family: "Source Sans Pro", sans-serif;
+}
