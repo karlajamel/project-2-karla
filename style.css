@@ -67,17 +67,37 @@ img {
   width: 100%;
   height: auto;
   display: block;
+  object-fit: contain;
 }
 
 figure {
   margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  color: rgb(80, 80, 80);
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+figcaption a {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
 }
 
 /* -------- HERO -------- */
+.hero {
+  text-align: center;
+  margin: 2rem 0;
+}
+
 .hero img {
   max-height: 450px;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 /* -------- FEATURED IMAGE -------- */
@@ -93,6 +113,7 @@ figure {
   max-width: 900px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: contain;
 }
 
 /* -------- GRID SECTION -------- */
@@ -100,6 +121,19 @@ figure {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
+}
+
+.images-grid figure {
+  background-color: rgb(250, 250, 250);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.images-grid img {
+  max-height: 300px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
 }
 
 .landmarks-section {
@@ -124,8 +158,10 @@ figure {
 
 .card img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
   margin-bottom: 0.5rem;
+  object-fit: contain;
 }
 
 .card a {
@@ -168,7 +204,7 @@ footer {
 
 /* -------- MOBILE RESPONSIVENESS -------- */
 @media (max-width: 800px) {
-  landmarks-grid {
+  .landmarks-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
